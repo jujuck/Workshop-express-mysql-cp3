@@ -60,7 +60,7 @@ describe('BOOKS ROUTES', () => {
     await supertest(app)
       .put(`/api/books/${persistentDatas.createdBooks.idbooks}`)
       .send({
-        title: 'A Song Of Ice And Fire',
+        title: 'The Light Side of the Sun'e',
       })
       .expect(204);
 
@@ -68,7 +68,7 @@ describe('BOOKS ROUTES', () => {
       `/api/books/${persistentDatas.createdBooks.idbooks}`
     );
 
-    expect(res.body).toHaveProperty('title', 'A Song Of Ice And Fire');
+    expect(res.body).toHaveProperty('title', 'The Light Side of the Sun'');
   });
 
   it(`should delete the created books 🧪 /api/books/`, async () => {
