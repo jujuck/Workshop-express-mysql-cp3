@@ -2,7 +2,7 @@ const supertest = require('supertest');
 
 const app = require('../src/app');
 
-const booksKeys = ['id', 'title', 'genre', 'picture', 'artist', 'summary', 'year'];
+const booksKeys = ['idbooks', 'title', 'genre', 'picture', 'artist', 'summary', 'year'];
 const bookToCreate = {
   title: 'A Song Of Ice And Fire',
   genre: 'fantasy',
