@@ -58,14 +58,14 @@ describe('BOOKS ROUTES', () => {
 
   it(`should update the created books title 🧪 /api/books/`, async () => {
     await supertest(app)
-      .put(`/api/books/${persistentDatas.createdBooks.id}`)
+      .put(`/api/books/${persistentDatas.createdBooks.idbooks}`)
       .send({
         title: 'A Song Of Ice And Fire',
       })
       .expect(204);
 
     const res = await supertest(app).get(
-      `/api/books/${persistentDatas.createdBooks.id}`
+      `/api/books/${persistentDatas.createdBooks.idbooks}`
     );
 
     expect(res.body).toHaveProperty('title', 'The Light Side of the Sun');
@@ -73,11 +73,11 @@ describe('BOOKS ROUTES', () => {
 
   it(`should delete the created books 🧪 /api/books/`, async () => {
     await supertest(app)
-      .delete(`/api/books/${persistentDatas.createdBooks.id}`)
+      .delete(`/api/books/${persistentDatas.createdBooks.idbooks}`)
       .expect(204);
 
     await supertest(app)
-      .get(`/api/books/${persistentDatas.createdBooks.id}`)
+      .get(`/api/books/${persistentDatas.createdBooks.idbooks}`)
       .expect(404);
   });
 });
