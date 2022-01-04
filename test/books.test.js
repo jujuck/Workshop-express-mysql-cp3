@@ -68,7 +68,7 @@ describe('BOOKS ROUTES', () => {
       `/api/books/${persistentDatas.createdBooks.idbooks}`
     );
 
-    expect(res.body).toHaveProperty('title', 'The Light Side of the Sun');
+    expect(res.body).toHaveProperty('title', 'A Song Of Ice And Fire');
   });
 
   it(`should delete the created books 🧪 /api/books/`, async () => {
